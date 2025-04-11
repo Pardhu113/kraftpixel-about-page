@@ -1,0 +1,404 @@
+/* Basic Reset & Body Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #475467; /* Default text color */
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px; /* Desktop padding */
+}
+
+/* --- Header Styles --- */
+header {
+    padding: 16px 0; /* Slightly reduced padding */
+    border-bottom: 1px solid #eaecf0;
+    background-color: #fff; /* Ensure header bg is white */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.5rem; /* Adjusted size */
+    color: #101828; /* Darker color for logo */
+}
+
+nav {
+    margin-left: auto; /* Push nav left towards center */
+    margin-right: 40px; /* Space between nav and actions */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px; /* Adjusted gap */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #475467;
+    font-weight: 500;
+    font-size: 1rem;
+}
+nav ul li a:hover {
+     color: #6941C6; /* Purple hover */
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Adjusted gap */
+}
+
+.header-actions .login-btn {
+    text-decoration: none;
+    color: #475467;
+    font-weight: 500;
+    padding: 10px 18px; /* Matching button padding */
+    font-size: 1rem;
+    border: 1px solid transparent; /* Maintain layout */
+    border-radius: 8px;
+}
+.header-actions .login-btn:hover {
+     color: #101828;
+     background-color: #f9fafb; /* Slight bg on hover */
+}
+
+
+.header-actions .signup-btn {
+    text-decoration: none;
+    background-color: #7F56D9; /* Purple */
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 1px solid #7F56D9;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.header-actions .signup-btn:hover {
+    background-color: #6941C6; /* Darker purple */
+}
+
+.mobile-menu-icon {
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #344054;
+    padding: 5px; /* Add padding for easier tap */
+}
+
+/* --- Main Content Styles --- */
+main {
+    padding: 64px 0 96px 0; /* Adjusted padding (top/bottom) */
+}
+
+.about-intro {
+    text-align: center;
+    margin-bottom: 64px; /* Increased spacing */
+}
+
+.about-intro .tag {
+    color: #6941C6; /* Purple */
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.about-intro h1 {
+    font-size: 3rem; /* Adjusted size */
+    color: #101828;
+    margin-bottom: 20px; /* Adjusted spacing */
+    font-weight: 600;
+    letter-spacing: -0.02em; /* Slight tightening */
+}
+
+.about-intro p {
+    font-size: 1.25rem; /* Larger intro text */
+    color: #475467;
+    max-width: 768px; /* Control width */
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.about-details {
+    display: flex;
+    gap: 64px; /* Increased gap */
+    align-items: flex-start;
+    margin-bottom: 96px; /* Spacing before logos */
+}
+
+.about-image {
+    flex: 1;
+    /* Placeholder styling */
+    background-color: #f2f4f7;
+    aspect-ratio: 560 / 400; /* Approximate ratio from image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #98A2B3;
+    font-size: 1rem;
+    border-radius: 16px; /* More rounded */
+    overflow: hidden;
+}
+ .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+
+.about-text-stats {
+    flex: 1;
+    padding-top: 16px; /* Align text slightly lower */
+}
+
+.about-text-stats .tag {
+     color: #6941C6; /* Purple */
+     font-weight: 600;
+     margin-bottom: 12px;
+     font-size: 1rem;
+     display: inline-block;
+}
+
+.about-text-stats h2 {
+    font-size: 2.25rem; /* Adjusted size */
+    color: #101828;
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+     letter-spacing: -0.02em;
+}
+
+/* Hide mobile paragraph on desktop */
+.about-text-stats .intro-paragraph.mobile-only {
+    display: none;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 48px; /* Row and column gap */
+    margin-top: 40px; /* Space above stats */
+}
+
+.stat-item .number {
+    font-size: 3.75rem; /* Large number */
+    font-weight: 600;
+    color: #6941C6; /* Purple */
+    margin-bottom: 12px;
+    line-height: 1;
+     letter-spacing: -0.02em;
+}
+
+.stat-item .label {
+    font-weight: 500;
+    color: #101828;
+    font-size: 1.125rem; /* Slightly larger label */
+    margin-bottom: 4px;
+}
+
+/* Description not present in the image, remove style if not needed */
+.stat-item .description {
+     font-size: 1rem;
+     color: #475467;
+}
+
+
+/* --- Logos Section --- */
+/* Initially hidden, shown only via desktop media query */
+.logos-section {
+     padding: 64px 0;
+     text-align: center;
+     border-top: 1px solid #eaecf0; /* Separator line */
+     display: none; /* Hidden by default */
+}
+
+.logos-section.desktop-only {
+    display: block; /* Show on desktop */
+}
+
+.logos-section p {
+    color: #475467;
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.logos-container {
+    display: flex;
+    justify-content: space-between; /* Spread logos */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px; /* Gap between logos */
+}
+
+.logo-item {
+    font-size: 1rem; /* Adjust as needed */
+    font-weight: 500;
+    color: #667085; /* Logo text color */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+ .logo-item i { /* Basic icon placeholder */
+     width: 24px;
+     height: 24px;
+     background-color: #d0d5dd; /* Placeholder color */
+     border-radius: 50%;
+     display: inline-block;
+ }
+
+
+/* --- Mobile Styles --- */
+@media (max-width: 991px) { /* Adjust breakpoint for tablet/smaller desktop */
+    .container {
+        padding: 0 24px;
+    }
+    nav {
+        margin-right: 20px;
+    }
+    nav ul {
+        gap: 20px;
+    }
+    .about-details {
+        gap: 32px;
+    }
+    .stats-grid {
+        gap: 24px 32px;
+    }
+    .stat-item .number {
+        font-size: 3rem;
+    }
+     .stat-item .label {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+         padding: 0 16px; /* Mobile padding */
+    }
+
+    nav, .header-actions {
+        display: none; /* Hide desktop nav and actions */
+    }
+
+    .mobile-menu-icon {
+        display: block; /* Show burger icon */
+    }
+
+    header {
+        padding: 12px 0; /* Adjust header padding */
+    }
+
+    main {
+        padding: 48px 0; /* Adjust main padding */
+    }
+
+    .about-intro {
+        margin-bottom: 48px;
+        text-align: left; /* Align left on mobile */
+    }
+    .about-intro h1 {
+        font-size: 2.25rem; /* Mobile heading size */
+        margin-bottom: 16px;
+    }
+    .about-intro p {
+        font-size: 1.125rem; /* Mobile intro text */
+        max-width: 100%; /* Full width */
+    }
+
+    .about-details {
+        flex-direction: column-reverse; /* Stack elements, text first */
+        gap: 40px;
+        margin-bottom: 48px;
+    }
+
+    .about-image,
+    .about-text-stats {
+        max-width: 100%; /* Take full width */
+    }
+    .about-image {
+        aspect-ratio: 343 / 240; /* Mobile aspect ratio */
+    }
+
+     .about-text-stats {
+        padding-top: 0; /* Reset padding */
+     }
+
+     .about-text-stats h2 {
+         font-size: 1.875rem; /* Mobile heading size */
+         margin-bottom: 16px;
+     }
+
+     /* Show mobile paragraph on mobile */
+     .about-text-stats .intro-paragraph.mobile-only {
+        display: block;
+        font-size: 1rem;
+        color: #475467;
+        margin-bottom: 32px; /* Space before stats */
+        line-height: 1.5;
+     }
+
+    .stats-grid {
+        /* Still two columns on mobile per the design */
+        gap: 32px 24px; /* Adjust mobile gap */
+        margin-top: 0; /* Reset margin as paragraph handles spacing */
+    }
+
+    .stat-item {
+        /* Center text within stat items if needed */
+        /* text-align: center; */
+    }
+
+    .stat-item .number {
+        font-size: 3rem; /* Mobile number size */
+        margin-bottom: 8px;
+    }
+     .stat-item .label {
+         font-size: 1rem; /* Mobile label size */
+     }
+
+    /* Hide Desktop Logo section on mobile */
+    .logos-section.desktop-only {
+         display: none;
+    }
+}
+
+@media (max-width: 480px) {
+     .about-intro h1 {
+        font-size: 1.875rem;
+    }
+     .about-intro p {
+        font-size: 1rem;
+    }
+     .about-text-stats h2 {
+         font-size: 1.5rem;
+     }
+     .stats-grid {
+        grid-template-columns: 1fr; /* Stack stats on very small screens */
+        gap: 32px; /* Single column gap */
+        text-align: left; /* Align text left when stacked */
+    }
+    .stat-item .number {
+        font-size: 2.25rem; /* Smaller numbers */
+    }
+}
